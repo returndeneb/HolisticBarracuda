@@ -45,7 +45,7 @@ public class HolisticPipeline : System.IDisposable
     
     // Count of face landmarks vertices.
     public int faceVertexCount => FaceLandmarkDetector.VertexCount;
-    public float faceDetectionScore => facePipeline.FaceDetectionScore;
+    // public float faceDetectionScore => facePipeline.FaceDetectionScore;
     /*
     Face landmark result buffer.
     'faceVertexBuffer' is array of float4 type.

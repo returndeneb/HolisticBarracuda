@@ -9,7 +9,7 @@ namespace MediaPipe.FaceMesh {
 // Basic implementation of the face pipeline class
 //
 
-sealed partial class FacePipeline : System.IDisposable
+public sealed partial class FacePipeline : System.IDisposable
 {
     #region Private objects
 

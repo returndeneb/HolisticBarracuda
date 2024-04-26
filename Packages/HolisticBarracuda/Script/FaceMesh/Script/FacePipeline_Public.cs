@@ -8,64 +8,61 @@ namespace MediaPipe.FaceMesh {
 //
 
 public partial class FacePipeline
-{
-    #region Accessors for vertex buffers
+    {
+        #region Accessors for vertex buffers
 
-    public ComputeBuffer RawFaceVertexBuffer
-      => _landmarkDetector.face.VertexBuffer;
+        public GraphicsBuffer RawFaceVertexBuffer
+            => _landmarkDetector.face.VertexBuffer;
 
-    public ComputeBuffer RawLeftEyeVertexBuffer
-      => _landmarkDetector.eyeL.VertexBuffer;
+        public GraphicsBuffer RawLeftEyeVertexBuffer
+            => _landmarkDetector.eyeL.VertexBuffer;
 
-    public ComputeBuffer RawRightEyeVertexBuffer
-      => _landmarkDetector.eyeR.VertexBuffer;
+        public GraphicsBuffer RawRightEyeVertexBuffer
+            => _landmarkDetector.eyeR.VertexBuffer;
 
-    public ComputeBuffer RefinedFaceVertexBuffer
-      => _computeBuffer.filter;
+        public ComputeBuffer RefinedFaceVertexBuffer
+            => _computeBuffer.filter;
 
-    #endregion
+        #endregion
 
-    #region Accessors for cropped textures
+        #region Accessors for cropped textures
 
-    public Texture CroppedFaceTexture
-      => _cropRT.face;
+        public Texture CroppedFaceTexture
+            => _cropRT.face;
 
-    public Texture CroppedLeftEyeTexture
-      => _cropRT.eyeL;
+        public Texture CroppedLeftEyeTexture
+            => _cropRT.eyeL;
 
-    public Texture CroppedRightEyeTexture
-      => _cropRT.eyeR;
+        public Texture CroppedRightEyeTexture
+            => _cropRT.eyeR;
 
-    #endregion
+        #endregion
 
-    #region Accessors for crop region matrices
+        #region Accessors for crop region matrices
 
-    public float4x4 FaceCropMatrix
-      => _faceRegion.CropMatrix;
+        public float4x4 FaceCropMatrix
+            => _faceRegion.CropMatrix;
 
-    public float4x4 LeftEyeCropMatrix
-      => _leyeRegion.CropMatrix;
+        public float4x4 LeftEyeCropMatrix
+            => _leyeRegion.CropMatrix;
 
-    public float4x4 RightEyeCropMatrix
-      => _reyeRegion.CropMatrix;
+        public float4x4 RightEyeCropMatrix
+            => _reyeRegion.CropMatrix;
 
-    #endregion
+        #endregion
 
-    public float FaceDetectionScore
-      => _faceDetectionScore;
+        #region Public methods
 
-    #region Public methods
+        public FacePipeline(ResourceSet resources)
+            => AllocateObjects(resources);
 
-    public FacePipeline(ResourceSet resources)
-      => AllocateObjects(resources);
+        public void Dispose()
+            => DeallocateObjects();
 
-    public void Dispose()
-      => DeallocateObjects();
+        public void ProcessImage(Texture image)
+            => RunPipeline(image);
 
-    public void ProcessImage(Texture image)
-      => RunPipeline(image);
-
-    #endregion
-}
+        #endregion
+    }
 
 } // namespace MediaPipe.FaceMesh

@@ -8,17 +8,16 @@ namespace MediaPipe.FaceMesh {
 // Image processing part of the face pipeline class
 //
 
-partial class FacePipeline
+public partial class FacePipeline
 {
     // Face/eye region trackers
     FaceRegion _faceRegion = new FaceRegion();
     EyeRegion _leyeRegion = new EyeRegion();
     EyeRegion _reyeRegion = new EyeRegion(true);
-    float _faceDetectionScore;
 
     // Vertex retrieval from the face landmark detector
     float4 GetFaceVertex(int index)
-      => _landmarkDetector.face.VertexArray.ElementAt(index);
+      => _landmarkDetector.face.VertexArray[index];
 
     void RunPipeline(Texture input)
     {
@@ -26,9 +25,9 @@ partial class FacePipeline
         _faceDetector.ProcessImage(input);
 
         // Cancel if the face detection score is too low.
-        var face = _faceDetector.Detections.FirstOrDefault();
-        _faceDetectionScore = face.score;
-        if (_faceDetectionScore < 0.5f) return;
+        if (_faceDetector.Detections.IsEmpty) return;
+        var face = _faceDetector.Detections[0];
+        if (face.score < 0.5f) return;
 
         // Try updating the face region with the detection result. It's
         // actually updated only when there is a noticeable jump from the last
