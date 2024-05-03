@@ -34,6 +34,7 @@ public static class BufferUtil
         var data = new ComputeTensorData(shape, false);
         var tensor = TensorFloat.Zeros(shape);
         tensor.AttachToDevice(data);
+
         return (tensor, data);
     }
 }

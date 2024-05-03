@@ -1,4 +1,5 @@
-using System.Collections.Generic;
+using Klak.NNUtils;
+using Klak.NNUtils.Extensions;
 using Unity.Sentis;
 using UnityEngine;
 
@@ -9,54 +10,7 @@ namespace MediaPipe.BlazePalm {
 //
 public sealed partial class PalmDetector : System.IDisposable
 {
-    #region Public accessors
-
-    public int ImageSize
-      => _size;
-
-    public ComputeBuffer DetectionBuffer
-      => _post2Buffer;
-
-    public ComputeBuffer CountBuffer
-      => _countBuffer;
-
-    public void SetIndirectDrawCount(ComputeBuffer drawArgs)
-      => ComputeBuffer.CopyCount(_post2Buffer, drawArgs, sizeof(uint));
-
-    public IEnumerable<Detection> Detections
-      => _post2ReadCache ?? UpdatePost2ReadCache();
-
-    #endregion
-
-    #region Public methods
-
-    public PalmDetector(ResourceSet resources)
-    {
-        _resources = resources;
-        AllocateObjects();
-    }
-
-    public void Dispose()
-      => DeallocateObjects();
-
-    public void ProcessImage(Texture image, float threshold = 0.75f)
-      => RunModel(Preprocess(image), threshold);
-
-    public void ProcessImage(ComputeBuffer buffer, float threshold = 0.75f)
-      => RunModel(buffer, threshold);
-
-    #endregion
-
-    #region Compile-time constants
-
-    // Maximum number of detections. This value must be matched with
-    // MAX_DETECTION in Common.hlsl.
-    const int MaxDetection = 64;
-
-    #endregion
-
-    #region Private objects
-
+    ImagePreprocess _preprocess;
     ResourceSet _resources;
     ComputeBuffer _preBuffer;
     ComputeBuffer _post1Buffer;
@@ -64,29 +18,42 @@ public sealed partial class PalmDetector : System.IDisposable
     ComputeBuffer _countBuffer;
     IWorker _worker;
     int _size;
+    Detection[] _post2ReadCache;
+    const int MaxDetection = 64;
+    
+    public ComputeBuffer DetectionBuffer
+      => _post2Buffer;
 
-    void AllocateObjects()
+    public ComputeBuffer CountBuffer
+      => _countBuffer;
+    
+    public PalmDetector(ResourceSet resources)
     {
+        _resources = resources;
         var model = ModelLoader.Load(_resources.model);
-        _size = model.inputs[0].shape.ToTensorShape()[2]; // Input tensor width
+        _size = model.inputs[0].GetTensorShape().GetWidth();
+        _worker = WorkerFactory.CreateWorker(BackendType.GPUCompute, model);
         
+        _preprocess = new ImagePreprocess(_size, _size, nchwFix: true);
 
         _preBuffer = new ComputeBuffer(_size * _size * 3, sizeof(float));
 
         _post1Buffer = new ComputeBuffer
-          (MaxDetection, Detection.Size, ComputeBufferType.Append);
+            (MaxDetection, Detection.Size, ComputeBufferType.Append);
 
         _post2Buffer = new ComputeBuffer
-          (MaxDetection, Detection.Size, ComputeBufferType.Append);
+            (MaxDetection, Detection.Size, ComputeBufferType.Append);
 
         _countBuffer = new ComputeBuffer
-          (1, sizeof(uint), ComputeBufferType.Raw);
-
-        _worker = WorkerFactory.CreateWorker(BackendType.GPUCompute, model);
+            (1, sizeof(uint), ComputeBufferType.Raw);
+        
     }
 
-    void DeallocateObjects()
-    {
+    public void Dispose()
+    { 
+        _preprocess?.Dispose();
+        _preprocess = null;
+        
         _preBuffer?.Dispose();
         _preBuffer = null;
 
@@ -103,58 +70,41 @@ public sealed partial class PalmDetector : System.IDisposable
         _worker = null;
     }
 
-    #endregion
-
-    #region Neural network inference function
-
-    ComputeBuffer Preprocess(Texture source)
+    public void ProcessImage(Texture image, float threshold = 0.75f)
     {
-        // Preprocessing
-        var pre = _resources.preprocess;
-        pre.SetInt("_ImageSize", _size);
-        pre.SetTexture(0, "_Texture", source);
-        pre.SetBuffer(0, "_Tensor", _preBuffer);
-        pre.Dispatch(0, _size / 8, _size / 8, 1);
-        return _preBuffer;
-    }
-
-    void RunModel(ComputeBuffer input, float threshold)
-    {
-        // Reset the compute buffer counters.
+        // var pre = _resources.preprocess;
+        // pre.SetInt("_ImageSize", _size);
+        // pre.SetTexture(0, "_Texture", image);
+        // pre.SetBuffer(0, "_Tensor", _preBuffer);
+        // pre.Dispatch(0, _size / 8, _size / 8, 1);
+        
         _post1Buffer.SetCounterValue(0);
         _post2Buffer.SetCounterValue(0);
-
-        // Run the BlazePalm model.
         
-        int bufferSize = _size * _size * 3;
-        var data = new float[bufferSize];
-        input.GetData(data);
-        var shape = new TensorShape(1, 3,_size, _size);
-        var inputTensor = new TensorFloat(shape, data);
-        _worker.Execute(inputTensor);
-
-        // Output tensors -> Temporary render textures
-        var scoresRT = _worker.CopyOutputToTempRT("classificators",  1, 896);
-        var  boxesRT = _worker.CopyOutputToTempRT("regressors"    , 18, 896);
-
-        // 1st postprocess (bounding box aggregation)
+        // int bufferSize = _size * _size * 3;
+        // var data = new float[bufferSize];
+        // _preBuffer.GetData(data);
+        // var shape = new TensorShape(1, 3,_size, _size);
+        // var inputTensor = new TensorFloat(shape, data);
+        // _worker.Execute(inputTensor);
+        
+        _worker.Execute(_preprocess.Tensor);
+        
         var post1 = _resources.postprocess1;
         post1.SetFloat("_ImageSize", _size);
         post1.SetFloat("_Threshold", threshold);
 
-        post1.SetTexture(0, "_Scores", scoresRT);
-        post1.SetTexture(0, "_Boxes", boxesRT);
+        post1.SetBuffer(0, "_Scores", ((ComputeTensorData)_worker.PeekOutput("classificators").tensorOnDevice).buffer);
+        post1.SetBuffer(0, "_Boxes", ((ComputeTensorData)_worker.PeekOutput("regressors").tensorOnDevice).buffer);
         post1.SetBuffer(0, "_Output", _post1Buffer);
         post1.Dispatch(0, 1, 1, 1);
 
-        post1.SetTexture(1, "_Scores", scoresRT);
-        post1.SetTexture(1, "_Boxes", boxesRT);
+        post1.SetBuffer(1, "_Scores", ((ComputeTensorData)_worker.PeekOutput("classificators").tensorOnDevice).buffer);
+        post1.SetBuffer(1, "_Boxes", ((ComputeTensorData)_worker.PeekOutput("regressors").tensorOnDevice).buffer);
         post1.SetBuffer(1, "_Output", _post1Buffer);
         post1.Dispatch(1, 1, 1, 1);
 
         // Release the temporary render textures.
-        RenderTexture.ReleaseTemporary(scoresRT);
-        RenderTexture.ReleaseTemporary(boxesRT);
 
         // Retrieve the bounding box count.
         ComputeBuffer.CopyCount(_post1Buffer, _countBuffer, 0);
@@ -172,26 +122,7 @@ public sealed partial class PalmDetector : System.IDisposable
         // Read cache invalidation
         _post2ReadCache = null;
     }
-
-    #endregion
-
-    #region GPU to CPU readback
-
-    Detection[] _post2ReadCache;
-    int[] _countReadCache = new int[1];
-
-    Detection[] UpdatePost2ReadCache()
-    {
-        _countBuffer.GetData(_countReadCache, 0, 0, 1);
-        var count = _countReadCache[0];
-
-        _post2ReadCache = new Detection[count];
-        _post2Buffer.GetData(_post2ReadCache, 0, 0, count);
-
-        return _post2ReadCache;
-    }
-
-    #endregion
+    
 }
 
 } // namespace MediaPipe.BlazePalm

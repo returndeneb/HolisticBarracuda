@@ -39,7 +39,6 @@ namespace Mediapipe.PoseLandmark
         */
         public ComputeBuffer worldLandmarkBuffer;
         // Pose segmentation.
-        public RenderTexture segmentationRT;
         // Pose landmark point counts.
         public int vertexCount => BODY_VERTEX_COUNT;
         #endregion
@@ -54,8 +53,6 @@ namespace Mediapipe.PoseLandmark
         const int BODY_LD_LEN = 195;
         // World landmark output vector length of network model. 
         const int WORLD_LD_LEN = 117;
-        // Pose segmentation texture size.
-        const int SEGMENTATION_SIZE = 128;
         #endregion
 
         #region private variable
@@ -77,7 +74,6 @@ namespace Mediapipe.PoseLandmark
             fullModel = resource.fullModel;
 
             networkInputBuffer = new ComputeBuffer(IMAGE_SIZE * IMAGE_SIZE * 3, sizeof(float));
-            segmentationRT = new RenderTexture(SEGMENTATION_SIZE, SEGMENTATION_SIZE, 0, RenderTextureFormat.ARGB32);
             outputBuffer = new ComputeBuffer(vertexCount + 1, sizeof(float) * 4);
             worldLandmarkBuffer = new ComputeBuffer(vertexCount + 1, sizeof(float) * 4);
 
@@ -123,17 +119,12 @@ namespace Mediapipe.PoseLandmark
             postProcessCS.SetBuffer(0, "_OutputWorld", worldLandmarkBuffer);
             postProcessCS.Dispatch(0, 1, 1, 1);
 
-            // Set pose landmark segmentation texture.
-            var segTemp = CopyOutputToTempRT("Identity_2", SEGMENTATION_SIZE, SEGMENTATION_SIZE);
-            Graphics.Blit(segTemp, segmentationRT);
-            RenderTexture.ReleaseTemporary(segTemp);
         }
 
         public void Dispose(){
             networkInputBuffer?.Dispose();
             outputBuffer?.Dispose();
             worldLandmarkBuffer?.Dispose();
-            segmentationRT.Release();
             woker?.Dispose();
         }
         #endregion
@@ -171,18 +162,7 @@ namespace Mediapipe.PoseLandmark
             tensor.Dispose();
             return buffer;
         }
-
-        // Exchange network output tensor to RenderTexture.
-        RenderTexture CopyOutputToTempRT(string name, int w, int h)
-        {
-            var rtFormat = RenderTextureFormat.ARGB32;
-            var shape = new TensorShape(1, h, w, 1);
-            var rt = RenderTexture.GetTemporary(w, h, 0, rtFormat);
-            var tensor = woker.PeekOutput(name).ShallowReshape(shape) as TensorFloat;
-            TextureConverter.RenderToTexture(tensor, rt);
-            // tensor.Dispose();
-            return rt;
-        }
+        
         #endregion
     }
 }

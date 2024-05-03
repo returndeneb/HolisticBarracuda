@@ -8,12 +8,11 @@ namespace MediaPipe.HandLandmark {
 //
 public sealed partial class HandLandmarkDetector : System.IDisposable
 {
-    #region Private objects
-
     ResourceSet _resources;
+    IWorker _worker;
     ComputeBuffer _preBuffer;
     ComputeBuffer _postBuffer;
-    IWorker _worker;
+    
 
     void AllocateObjects()
     {
@@ -35,7 +34,6 @@ public sealed partial class HandLandmarkDetector : System.IDisposable
         _worker = null;
     }
 
-    #endregion
 
     #region Neural network inference function
 

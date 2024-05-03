@@ -44,7 +44,7 @@ public class HolisticPipeline : System.IDisposable
     public ComputeBuffer poseLandmarkWorldBuffer => blazePoseDetecter.worldLandmarkBuffer;
     
     // Count of face landmarks vertices.
-    public int faceVertexCount => FaceLandmarkDetector.VertexCount;
+    public int FaceVertexCount => FaceLandmarkDetector.VertexCount;
     public float faceDetectionScore => facePipeline.FaceDetectionScore;
     /*
     Face landmark result buffer.
@@ -133,7 +133,7 @@ public class HolisticPipeline : System.IDisposable
         palmDetector = new PalmDetector(resource.blazePalmResource);
         handLandmarkDetector = new HandLandmarkDetector(resource.handLandmarkResource);
 
-        faceVertexBuffer = new ComputeBuffer(faceVertexCount, sizeof(float) * 4);
+        faceVertexBuffer = new ComputeBuffer(FaceVertexCount, sizeof(float) * 4);
         leftEyeVertexBuffer = new ComputeBuffer(eyeVertexCount, sizeof(float) * 4);
         rightEyeVertexBuffer = new ComputeBuffer(eyeVertexCount, sizeof(float) * 4);
 
@@ -152,7 +152,7 @@ public class HolisticPipeline : System.IDisposable
         deltaLeftHandVertexBuffer = new ComputeBuffer(handVertexCount, sizeof(float) * 4);
         deltaRightHandVertexBuffer = new ComputeBuffer(handVertexCount, sizeof(float) * 4);
 
-        faceLandmarks = new Vector4[faceVertexCount];
+        faceLandmarks = new Vector4[FaceVertexCount];
         leftEyeLandmarks = new Vector4[eyeVertexCount];
         rightEyeLandmarks = new Vector4[eyeVertexCount];
         leftHandLandmarks = new Vector4[handVertexCount + 1];
@@ -246,7 +246,7 @@ public class HolisticPipeline : System.IDisposable
         faceCs.SetVector("_spadScale", spadScale);
         faceCs.SetBuffer(0, "_faceVertices", facePipeline.RefinedFaceVertexBuffer);
         faceCs.SetBuffer(0, "_faceReconVertices", faceVertexBuffer);
-        faceCs.Dispatch(0, faceVertexCount, 1, 1);
+        faceCs.Dispatch(0, FaceVertexCount, 1, 1);
         
         // Reconstruct left eye rotation and map to cordinates of input texture.
         faceCs.SetMatrix("_irisCropMatrix", facePipeline.LeftEyeCropMatrix);
