@@ -18,7 +18,7 @@ partial class FacePipeline
 
     // Vertex retrieval from the face landmark detector
     float4 GetFaceVertex(int index)
-      => _landmarkDetector.face.VertexArray.ElementAt(index);
+      => _landmarkDetector.face.VertexArray[index];
 
     void RunPipeline(Texture input)
     {

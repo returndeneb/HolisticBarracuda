@@ -87,7 +87,7 @@
       "dependencies": {
         "com.unity.mathematics": "1.2.1",
         "jp.keijiro.mediapipe.blazeface": "1.1.1",
-        "jp.keijiro.mediapipe.facelandmark": "1.0.0",
+        "jp.keijiro.mediapipe.facelandmark": "1.1.0",
         "jp.keijiro.mediapipe.iris": "1.2.0",
         "jp.keijiro.mediapipe.blazepalm": "1.0.2",
         "jp.keijiro.mediapipe.handlandmark": "1.0.1",
@@ -140,11 +140,12 @@
       "url": "https://registry.npmjs.com"
     },
     "jp.keijiro.mediapipe.facelandmark": {
-      "version": "1.0.0",
+      "version": "1.1.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.barracuda": "1.3.3-preview"
+        "com.unity.barracuda": "3.0.0",
+        "jp.keijiro.klak.nnutils": "1.0.0"
       },
       "url": "https://registry.npmjs.com"
     },

@@ -11,7 +11,7 @@ public partial class FacePipeline
 {
     #region Accessors for vertex buffers
 
-    public ComputeBuffer RawFaceVertexBuffer
+    public GraphicsBuffer RawFaceVertexBuffer
       => _landmarkDetector.face.VertexBuffer;
 
     public GraphicsBuffer RawLeftEyeVertexBuffer
