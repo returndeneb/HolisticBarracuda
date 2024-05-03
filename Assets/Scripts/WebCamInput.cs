@@ -20,6 +20,7 @@ public class WebCamInput : MonoBehaviour
     void Start()
     {
         if(staticInput == null){
+            Debug.Log(webCamName);
             webCamTexture = new WebCamTexture(webCamName, (int)webCamResolution.x, (int)webCamResolution.y);
             webCamTexture.Play();
         }
