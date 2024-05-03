@@ -1,0 +1,22 @@
+#pragma kernel Postprocess
+
+// 
+// Postprocessor (tensor to vertex list conversion)
+//
+
+#define VERTEX_COUNT 468
+
+// Input
+StructuredBuffer<float> _Tensor;
+
+// Output
+RWStructuredBuffer<float4> _Vertices;
+
+[numthreads(52, 1, 1)]
+void Postprocess(uint id : SV_DispatchThreadID)
+{
+    float x =     _Tensor[id * 3 + 0] / 192;
+    float y = 1 - _Tensor[id * 3 + 1] / 192;
+    float z =     _Tensor[id * 3 + 2] / 192;
+    _Vertices[id] = float4(x, y, z, 1);
+}

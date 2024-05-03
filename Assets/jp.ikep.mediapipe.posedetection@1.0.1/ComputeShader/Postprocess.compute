@@ -1,0 +1,73 @@
+﻿/*
+PoseDetection neural network model output shape are 
+    _scores: (1, 896)
+    _boxs: (12, 896) .
+
+_boxs variable's 12 rows are 
+    position, size, 
+    hip center position, fully body ROI, 
+    sholder center postion, upper body ROI .
+(https://github.com/google/mediapipe/issues/1449#issuecomment-770124530)
+
+896 Colmuns are vectors flatten anchors feture map(6*8*8 + 2*16*16).
+Anchors feture map Similar to Mediapipe BlazeFace(https://arxiv.org/pdf/1907.05047.pdf).
+*/
+
+#pragma kernel PostprocessFor8Map
+#pragma kernel PostprocessFor16Map
+
+#include "Common.cginc"
+
+float _threshold;
+Texture2D<float> _scores;
+Texture2D<float> _boxs;
+AppendStructuredBuffer<PoseDetection> _output;
+
+float Sigmoid(float x){
+    return 1.0 / (1.0 + exp(-x));
+}
+
+void PostProcess(uint2 id, uint mapSize, uint chSize, uint indexOffset)
+{
+    const float scale = 1.0 / IMAGE_SIZE;
+    uint index_In0chMap = (id.y * mapSize + id.x) * chSize + indexOffset;
+    float2 anchor = (mapSize - 0.5 - id) / mapSize;
+
+    for(uint i=0; i<chSize; i++){
+        uint index = index_In0chMap + i;
+        
+        PoseDetection pd;
+        pd.score = Sigmoid(_scores[uint2(0, index)]);
+
+        float x = _boxs[uint2(0, index)] * scale;
+        float y = _boxs[uint2(1, index)] * scale;
+        float w = _boxs[uint2(2, index)] * scale;
+        float h = _boxs[uint2(3, index)] * scale;
+        pd.center = anchor + float2(x, y);
+        pd.extent = float2(w, h);
+        
+        [unroll] for(uint i=0; i<4; i++){
+            x = _boxs[uint2(i*2 + 4, index)] * scale;
+            y = _boxs[uint2(i*2 + 5, index)] * scale;
+            pd.keyPoints[i] = anchor + float2(x, y);
+        }
+
+        if (pd.score > _threshold)_output.Append(pd);
+    }
+}
+
+// Process above vector of 896 Colmuns.
+[numthreads(8, 8, 1)]
+void PostprocessFor8Map(uint2 id : SV_DispatchThreadID)
+{
+    PostProcess(id, 8, 6, 0);
+}
+
+// Process behind vector of 896 Colmuns.
+[numthreads(16, 16, 1)]
+void PostprocessFor16Map(uint2 id : SV_DispatchThreadID)
+{   
+    const uint ABOVE_VECTOR_LENGTH = 8 * 8 * 6;
+    PostProcess(id, 16, 2, ABOVE_VECTOR_LENGTH);
+}
+

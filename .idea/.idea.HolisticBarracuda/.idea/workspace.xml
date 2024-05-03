@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="90d961ef-bd79-4db4-9339-04bcc38b62d7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/HolisticInferenceType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/HolisticPipeline.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/HolisticResource.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.blazepose@1.3.0.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.blazepose@1.3.0/ComputeShader/LowPassFilter.cginc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.blazepose@1.3.0/ComputeShader/LowPassFilter.cginc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.blazepose@1.3.0/ComputeShader/Misc.cginc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.blazepose@1.3.0/ComputeShader/Misc.cginc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.blazepose@1.3.0/ComputeShader/PoseRegion.cginc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.blazepose@1.3.0/ComputeShader/PoseRegion.cginc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.blazepose@1.3.0/ComputeShader/Process.compute" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.blazepose@1.3.0/ComputeShader/Process.compute.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.blazepose@1.3.0/Resources/BlazePose.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.blazepose@1.3.0/Resources/BlazePose.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.blazepose@1.3.0/Script/BlazePoseDetecter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.blazepose@1.3.0/Script/BlazePoseDetecter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.blazepose@1.3.0/Script/BlazePoseModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.blazepose@1.3.0/Script/BlazePoseModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.blazepose@1.3.0/Script/BlazePoseResource.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.blazepose@1.3.0/Script/BlazePoseResource.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/ComputeShader/Common.cginc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/ComputeShader/Common.cginc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/ComputeShader/PostProcess2.compute" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/ComputeShader/PostProcess2.compute.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/ComputeShader/Postprocess.compute" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/ComputeShader/Postprocess.compute.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/ComputeShader/Preprocess.compute" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/ComputeShader/Preprocess.compute.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/ONNX.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/ONNX/pose_detection.onnx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/ONNX/pose_detection.onnx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/ResourceSet.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/ResourceSet/PoseDetection.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/ResourceSet/PoseDetection.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/Script.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/Script/PoseDetecter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/Script/PoseDetecter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/Script/PoseDetection.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/Script/PoseDetection.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/Script/PoseDetectionResource.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/Script/PoseDetectionResource.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1/ComputeShader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1/ComputeShader/Common.cginc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1/ComputeShader/Common.cginc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1/ComputeShader/Postprocess.compute" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1/ComputeShader/Postprocess.compute.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1/ComputeShader/Preprocess.compute" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1/ComputeShader/Preprocess.compute.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1/ONNX.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1/ONNX/pose_landmark_full.onnx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1/ONNX/pose_landmark_full.onnx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1/ONNX/pose_landmark_lite.onnx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1/ONNX/pose_landmark_lite.onnx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1/ResourceSet.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1/ResourceSet/PoseLandmark.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1/ResourceSet/PoseLandmark.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1/Script.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1/Script/PoseLandmarkModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1/Script/PoseLandmarkModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1/Script/PoseLandmarkResource.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1/Script/PoseLandmarkResource.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1/Script/PoseLandmarker.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1/Script/PoseLandmarker.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.klak.nnutils@1.0.0.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.klak.nnutils@1.0.0/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.klak.nnutils@1.0.0/.github/workflows/main.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.klak.nnutils@1.0.0/Runtime.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.klak.nnutils@1.0.0/Runtime/Extensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.klak.nnutils@1.0.0/Runtime/Extensions.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.klak.nnutils@1.0.0/Runtime/Preprocessor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.klak.nnutils@1.0.0/Runtime/Preprocessor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.klak.nnutils@1.0.0/Runtime/ReadCache.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.klak.nnutils@1.0.0/Runtime/ReadCache.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.klak.nnutils@1.0.0/Runtime/Utils.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.klak.nnutils@1.0.0/Runtime/Utils.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.klak.nnutils@1.0.0/Shaders.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.klak.nnutils@1.0.0/Shaders/Preprocess.compute" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.klak.nnutils@1.0.0/Shaders/Preprocess.compute.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/ONNX.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/ONNX/face_detection_back_256x256_barracuda.onnx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/ONNX/face_detection_back_256x256_barracuda.onnx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/ONNX/face_detection_front_128x128_barracuda.onnx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/ONNX/face_detection_front_128x128_barracuda.onnx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/ResourceSet.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/ResourceSet/BlazeFace128.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/ResourceSet/BlazeFace128.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/ResourceSet/BlazeFace256.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/ResourceSet/BlazeFace256.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/Runtime.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/Runtime/Detection.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/Runtime/Detection.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/Runtime/FaceDetector.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/Runtime/FaceDetector.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/Runtime/ResourceSet.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/Runtime/ResourceSet.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/Shaders.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/Shaders/Common.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/Shaders/Common.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/Shaders/Postprocess1.compute" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/Shaders/Postprocess1.compute.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/Shaders/Postprocess1Kernel.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/Shaders/Postprocess1Kernel.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/Shaders/Postprocess2.compute" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/Shaders/Postprocess2.compute.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/ONNX.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/ONNX/palm_detection_barracuda.onnx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/ONNX/palm_detection_barracuda.onnx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/ResourceSet.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/ResourceSet/BlazePalm.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/ResourceSet/BlazePalm.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Script.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Script/Detection.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Script/Detection.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Script/PalmDetector.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Script/PalmDetector.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Script/ResourceSet.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Script/ResourceSet.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Script/Utilities.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Script/Utilities.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Shader/Common.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Shader/Common.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Shader/Postprocess1.compute" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Shader/Postprocess1.compute.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Shader/Postprocess1Kernel.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Shader/Postprocess1Kernel.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Shader/Postprocess2.compute" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Shader/Postprocess2.compute.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Shader/Preprocess.compute" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Shader/Preprocess.compute.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Shader/Struct.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Shader/Struct.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.facelandmark@1.1.0.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.facelandmark@1.1.0/Mesh.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.facelandmark@1.1.0/Mesh/TemplateMesh.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.facelandmark@1.1.0/Mesh/TemplateMesh.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.facelandmark@1.1.0/Mesh/TemplatePoints.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.facelandmark@1.1.0/Mesh/TemplatePoints.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.facelandmark@1.1.0/Mesh/TemplateWire.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.facelandmark@1.1.0/Mesh/TemplateWire.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.facelandmark@1.1.0/ONNX.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.facelandmark@1.1.0/ONNX/face_landmark_barracuda.onnx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.facelandmark@1.1.0/ONNX/face_landmark_barracuda.onnx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.facelandmark@1.1.0/ResourceSet.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.facelandmark@1.1.0/ResourceSet/FaceLandmark.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.facelandmark@1.1.0/ResourceSet/FaceLandmark.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.facelandmark@1.1.0/Runtime.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.facelandmark@1.1.0/Runtime/FaceLandmarkDetector.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.facelandmark@1.1.0/Runtime/FaceLandmarkDetector.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.facelandmark@1.1.0/Runtime/ResourceSet.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.facelandmark@1.1.0/Runtime/ResourceSet.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.facelandmark@1.1.0/Shaders.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.facelandmark@1.1.0/Shaders/Postprocess.compute" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.facelandmark@1.1.0/Shaders/Postprocess.compute.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1/HandLandmark.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1/HandLandmark.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1/ONNX.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1/ONNX/hand_landmark.onnx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1/ONNX/hand_landmark.onnx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1/Script.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1/Script/HandLandmarkDetector.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1/Script/HandLandmarkDetector.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1/Script/HandLandmarkDetectorPublic.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1/Script/HandLandmarkDetectorPublic.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1/Script/Internal.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1/Script/Internal/Utilities.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1/Script/Internal/Utilities.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1/Script/ResourceSet.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1/Script/ResourceSet.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1/Shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1/Shader/Postprocess.compute" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1/Shader/Postprocess.compute.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1/Shader/Preprocess.compute" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1/Shader/Preprocess.compute.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.iris@1.2.0.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.iris@1.2.0/ONNX.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.iris@1.2.0/ONNX/iris_landmark_barracuda.onnx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.iris@1.2.0/ONNX/iris_landmark_barracuda.onnx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.iris@1.2.0/ResourceSet.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.iris@1.2.0/ResourceSet/Iris.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.iris@1.2.0/ResourceSet/Iris.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.iris@1.2.0/Runtime.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.iris@1.2.0/Runtime/EyeLandmarkDetector.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.iris@1.2.0/Runtime/EyeLandmarkDetector.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.iris@1.2.0/Runtime/EyeLandmarkDetectorExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.iris@1.2.0/Runtime/EyeLandmarkDetectorExtensions.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.iris@1.2.0/Runtime/ResourceSet.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.iris@1.2.0/Runtime/ResourceSet.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.iris@1.2.0/Shaders.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.iris@1.2.0/Shaders/Postprocess.compute" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.iris@1.2.0/Shaders/Postprocess.compute.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Visuallizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/Visuallizer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Visuallizer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/Visuallizer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WebCamInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/WebCamInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WebCamInput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/WebCamInput.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/CHANGELOG.md.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.blazepose@1.3.0/Resources.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/ComputeShader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/ComputeShader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/ComputeShader/CommonProcess.compute" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/ComputeShader/CommonProcess.compute" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/ComputeShader/CommonProcess.compute.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/ComputeShader/CommonProcess.compute.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/ComputeShader/FaceProcess.compute" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/ComputeShader/FaceProcess.compute" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/ComputeShader/FaceProcess.compute.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/ComputeShader/FaceProcess.compute.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/ComputeShader/HandProcess.compute" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/ComputeShader/HandProcess.compute" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/ComputeShader/HandProcess.compute.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/ComputeShader/HandProcess.compute.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/ComputeShader/HandRegion.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/ComputeShader/HandRegion.hlsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/ComputeShader/HandRegion.hlsl.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/ComputeShader/HandRegion.hlsl.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/ComputeShader/LowPassFilter.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/ComputeShader/LowPassFilter.hlsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/ComputeShader/LowPassFilter.hlsl.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/ComputeShader/LowPassFilter.hlsl.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/ComputeShader/Misc.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/ComputeShader/Misc.hlsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/ComputeShader/Misc.hlsl.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/ComputeShader/Misc.hlsl.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Documentation~/HolisticBarracuda.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/LICENSE.md.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.blazepose@1.3.0/ComputeShader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/README.md.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.blazepose@1.3.0/Script.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Resources.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Resources.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Resources/Holistic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Resources/Holistic.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Resources/Holistic.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Resources/Holistic.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/ResourceSet.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/ResourceSet.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/ResourceSet.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/ResourceSet.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Script.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Script.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Script/BoundingBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Script/BoundingBox.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Script/BoundingBox.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Script/BoundingBox.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Script/EyeRegion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Script/EyeRegion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Script/EyeRegion.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Script/EyeRegion.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Script/FacePipeline_Base.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Script/FacePipeline_Base.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Script/FacePipeline_Base.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Script/FacePipeline_Base.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Script/FacePipeline_Process.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Script/FacePipeline_Process.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Script/FacePipeline_Process.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Script/FacePipeline_Process.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Script/FacePipeline_Public.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Script/FacePipeline_Public.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Script/FacePipeline_Public.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Script/FacePipeline_Public.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Script/FaceRegion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Script/FaceRegion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Script/FaceRegion.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Script/FaceRegion.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Script/FloatFilter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Script/FloatFilter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Script/FloatFilter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Script/FloatFilter.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Script/IndexTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Script/IndexTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Script/IndexTable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Script/IndexTable.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Script/MediaPipe.FaceMesh.Runtime.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Script/MediaPipe.FaceMesh.Runtime.asmdef.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/ComputeShader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Script/ResourceSet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Script/ResourceSet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Script/ResourceSet.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Script/ResourceSet.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Script/Utilities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Script/Utilities.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Script/Utilities.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Script/Utilities.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Shader/Postprocess.compute" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Shader/Postprocess.compute" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Shader/Postprocess.compute.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Shader/Postprocess.compute.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Shader/Preprocess.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Shader/Preprocess.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/FaceMesh/Shader/Preprocess.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Shader/Preprocess.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/HolisticInferenceType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/HolisticInferenceType.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/HolisticInferenceType.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/HolisticPipeline.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/HolisticPipeline.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/HolisticPipeline.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/HolisticResource.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/HolisticResource.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HolisticBarracuda/Script/HolisticResource.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/Mediapipe.Holistic.Runtime.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/Script/Mediapipe.Holistic.Runtime.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/HolisticBarracuda/package.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/HolisticBarracuda/Script/FaceMesh/Script/FacePipeline_Process.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../original/HolisticBarracuda/Assets/Scripts/Visuallizer.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2fZKwHy7AfessNHQgRLJz7Cf5Sy" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "avakit",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.qodana",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\return\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\return\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\return\\AppData\\Local\\Symbols\\src"
+    ]
+  }
+}]]></component>
+  <component name="RunManager" selected="Standalone Player.Start Unity">
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.29f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\return\Documents\GitHub\HolisticBarracuda -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\return\Documents\GitHub\HolisticBarracuda" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.29f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\return\Documents\GitHub\HolisticBarracuda -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\return\Documents\GitHub\HolisticBarracuda" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="90d961ef-bd79-4db4-9339-04bcc38b62d7" name="Changes" comment="" />
+      <created>1714003397221</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714003397221</updated>
+      <workItem from="1714003397978" duration="3164000" />
+      <workItem from="1714030324321" duration="1000000" />
+      <workItem from="1714095497486" duration="1051000" />
+      <workItem from="1714098104787" duration="1304000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityProjectDiscoverer">
+    <option name="hasUnityReference" value="true" />
+    <option name="unityProject" value="true" />
+    <option name="unityProjectFolder" value="true" />
+  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
