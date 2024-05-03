@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Unity.Mathematics;
@@ -26,6 +27,7 @@ partial class FacePipeline
         _faceDetector.ProcessImage(input);
 
         // Cancel if the face detection score is too low.
+        if (_faceDetector.Detections.Length < 1) return;
         var face = _faceDetector.Detections[0];
         _faceDetectionScore = face.score;
         if (_faceDetectionScore < 0.5f) return;
