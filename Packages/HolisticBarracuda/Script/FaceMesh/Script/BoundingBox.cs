@@ -1,3 +1,4 @@
+using MediaPipe.BlazeFace;
 using Unity.Mathematics;
 
 namespace MediaPipe.FaceMesh {
@@ -39,7 +40,7 @@ readonly struct BoundingBox
     public BoundingBox(float4 v)
       => (Min, Max) = (v.xy, v.zw);
 
-    public BoundingBox(in MediaPipe.BlazeFace.FaceDetector.Detection d)
+    public BoundingBox(Detection d)
       => (Min, Max) = (d.center - d.extent * 0.5f, d.center + d.extent * 0.5f);
 
     public static BoundingBox CenterExtent(float2 center, float2 extent)

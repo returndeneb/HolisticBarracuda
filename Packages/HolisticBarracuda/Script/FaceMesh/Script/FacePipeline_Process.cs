@@ -26,7 +26,7 @@ partial class FacePipeline
         _faceDetector.ProcessImage(input);
 
         // Cancel if the face detection score is too low.
-        var face = _faceDetector.Detections.FirstOrDefault();
+        var face = _faceDetector.Detections[0];
         _faceDetectionScore = face.score;
         if (_faceDetectionScore < 0.5f) return;
 
