@@ -1,4 +1,4 @@
-using Unity.Barracuda;
+using Unity.Sentis;
 using UnityEngine;
 using Klak.NNUtils;
 using Klak.NNUtils.Extensions;
@@ -60,7 +60,7 @@ public sealed class EyeLandmarkDetector : System.IDisposable
 
         // Private objects
         _resources = resources;
-        _worker = model.CreateWorker(WorkerFactory.Device.GPU);
+        _worker = WorkerFactory.CreateWorker(BackendType.GPUCompute, model);
 
         // Preprocessing buffer
         _preprocess = new ImagePreprocess(ImageSize, ImageSize, nchwFix: true);

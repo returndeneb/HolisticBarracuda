@@ -1,4 +1,4 @@
-using Unity.Barracuda;
+using Unity.Sentis;
 using UnityEngine;
 
 namespace MediaPipe.HandLandmark {
@@ -20,7 +20,7 @@ public sealed partial class HandLandmarkDetector : System.IDisposable
         var model = ModelLoader.Load(_resources.model);
         _preBuffer = new ComputeBuffer(ImageSize * ImageSize * 3, sizeof(float));
         _postBuffer = new ComputeBuffer(VertexCount + 1, sizeof(float) * 4);
-        _worker = model.CreateWorker();
+        _worker = WorkerFactory.CreateWorker(BackendType.GPUCompute, model);
     }
 
     void DeallocateObjects()
@@ -51,8 +51,12 @@ public sealed partial class HandLandmarkDetector : System.IDisposable
     void RunModel(ComputeBuffer input)
     {
         // Run the BlazeFace model.
-        using (var tensor = new Tensor(1, ImageSize, ImageSize, 3, input))
-            _worker.Execute(tensor);
+        int bufferSize = ImageSize * ImageSize * 3;
+        var data = new float[bufferSize];
+        input.GetData(data);
+        var shape = new TensorShape(1, 3,ImageSize, ImageSize);
+        var inputTensor = new TensorFloat(shape, data);
+        _worker.Execute(inputTensor);
 
         // Postprocessing
         var post = _resources.postprocess;

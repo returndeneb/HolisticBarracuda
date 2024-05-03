@@ -1,5 +1,5 @@
 using UnityEngine;
-using Unity.Barracuda;
+using Unity.Sentis;
 
 namespace Mediapipe.PoseLandmark{
     [CreateAssetMenu(fileName = "PoseLandmark", menuName = "ScriptableObjects/Pose Landmark Resource")]
@@ -7,7 +7,7 @@ namespace Mediapipe.PoseLandmark{
     {
         public ComputeShader preProcessCS;
         public ComputeShader postProcessCS;
-        public NNModel liteModel;
-        public NNModel fullModel;
+        public ModelAsset liteModel;
+        public ModelAsset fullModel;
     }
 }

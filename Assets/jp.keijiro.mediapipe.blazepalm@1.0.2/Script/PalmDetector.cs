@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Unity.Barracuda;
+using Unity.Sentis;
 using UnityEngine;
 
 namespace MediaPipe.BlazePalm {
@@ -68,7 +68,8 @@ public sealed partial class PalmDetector : System.IDisposable
     void AllocateObjects()
     {
         var model = ModelLoader.Load(_resources.model);
-        _size = model.inputs[0].shape[6]; // Input tensor width
+        _size = model.inputs[0].shape.ToTensorShape()[2]; // Input tensor width
+        
 
         _preBuffer = new ComputeBuffer(_size * _size * 3, sizeof(float));
 
@@ -81,7 +82,7 @@ public sealed partial class PalmDetector : System.IDisposable
         _countBuffer = new ComputeBuffer
           (1, sizeof(uint), ComputeBufferType.Raw);
 
-        _worker = model.CreateWorker();
+        _worker = WorkerFactory.CreateWorker(BackendType.GPUCompute, model);
     }
 
     void DeallocateObjects()
@@ -124,8 +125,13 @@ public sealed partial class PalmDetector : System.IDisposable
         _post2Buffer.SetCounterValue(0);
 
         // Run the BlazePalm model.
-        using (var tensor = new Tensor(1, _size, _size, 3, input))
-            _worker.Execute(tensor);
+        
+        int bufferSize = _size * _size * 3;
+        var data = new float[bufferSize];
+        input.GetData(data);
+        var shape = new TensorShape(1, 3,_size, _size);
+        var inputTensor = new TensorFloat(shape, data);
+        _worker.Execute(inputTensor);
 
         // Output tensors -> Temporary render textures
         var scoresRT = _worker.CopyOutputToTempRT("classificators",  1, 896);

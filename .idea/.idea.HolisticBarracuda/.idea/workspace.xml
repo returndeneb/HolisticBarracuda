@@ -6,9 +6,28 @@
   <component name="ChangeListManager">
     <list default="true" id="90d961ef-bd79-4db4-9339-04bcc38b62d7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WebCamInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WebCamInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/ComputeShader/Postprocess.compute" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/ComputeShader/Postprocess.compute" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/Script/PoseDetecter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/Script/PoseDetecter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/Script/PoseDetectionResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.posedetection@1.0.1/Script/PoseDetectionResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1/Script/PoseLandmarkResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1/Script/PoseLandmarkResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1/Script/PoseLandmarker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jp.ikep.mediapipe.poselandmark@1.1.1/Script/PoseLandmarker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/jp.keijiro.klak.nnutils@1.0.0/Runtime/Extensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jp.keijiro.klak.nnutils@1.0.0/Runtime/Extensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/jp.keijiro.klak.nnutils@1.0.0/Runtime/Preprocessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jp.keijiro.klak.nnutils@1.0.0/Runtime/Preprocessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/jp.keijiro.klak.nnutils@1.0.0/Runtime/Utils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jp.keijiro.klak.nnutils@1.0.0/Runtime/Utils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/Runtime/FaceDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/Runtime/FaceDetector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/Runtime/ResourceSet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazeface@1.2.0/Runtime/ResourceSet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Script/PalmDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Script/PalmDetector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Script/ResourceSet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Script/ResourceSet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Script/Utilities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.blazepalm@1.0.2/Script/Utilities.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.facelandmark@1.1.0/Runtime/FaceLandmarkDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.facelandmark@1.1.0/Runtime/FaceLandmarkDetector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.facelandmark@1.1.0/Runtime/ResourceSet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.facelandmark@1.1.0/Runtime/ResourceSet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1/Script/HandLandmarkDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1/Script/HandLandmarkDetector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1/Script/Internal/Utilities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1/Script/Internal/Utilities.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1/Script/ResourceSet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.handlandmark@1.0.1/Script/ResourceSet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.iris@1.2.0/Runtime/EyeLandmarkDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.iris@1.2.0/Runtime/EyeLandmarkDetector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.iris@1.2.0/Runtime/ResourceSet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jp.keijiro.mediapipe.iris@1.2.0/Runtime/ResourceSet.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +44,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/HolisticBarracuda/Script/HolisticResource.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Visuallizer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WebCamInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.sentis@1.2.0-exp.2/Runtime/Core/Backends/GPUCompute/ComputeTensorData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../original/HolisticBarracuda/Assets/Scripts/Visuallizer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../GitHubl/PoseLandmarkBarracuda/Assets/Script/PoseVisuallizer.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -41,25 +62,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "avakit",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.qodana",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;avakit&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.qodana&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\return\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\return\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\return\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\return\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\return\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\return\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Standalone Player.Start Unity">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.29f1\Editor\Unity.exe" />
@@ -110,6 +131,7 @@
       <workItem from="1714030324321" duration="1000000" />
       <workItem from="1714095497486" duration="1051000" />
       <workItem from="1714098104787" duration="1304000" />
+      <workItem from="1714713282339" duration="7491000" />
     </task>
     <servers />
   </component>

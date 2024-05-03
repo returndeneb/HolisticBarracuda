@@ -1,5 +1,5 @@
 using UnityEngine;
-using Unity.Barracuda;
+using Unity.Sentis;
 
 namespace MediaPipe.BlazeFace {
 
@@ -10,7 +10,7 @@ namespace MediaPipe.BlazeFace {
                  menuName = "ScriptableObjects/MediaPipe/BlazeFace Resource Set")]
 public sealed class ResourceSet : ScriptableObject
 {
-    public NNModel model;
+    public ModelAsset model;
     public ComputeShader preprocess;
     public ComputeShader postprocess1;
     public ComputeShader postprocess2;

@@ -1,4 +1,4 @@
-using Unity.Barracuda;
+using Unity.Sentis;
 using UnityEngine;
 using Klak.NNUtils;
 using Klak.NNUtils.Extensions;
@@ -50,8 +50,8 @@ public sealed partial class FaceDetector : System.IDisposable
         _size = model.inputs[0].GetTensorShape().GetWidth();
 
         // GPU worker
-        _worker = model.CreateWorker(WorkerFactory.Device.GPU);
-
+        _worker = WorkerFactory.CreateWorker(BackendType.GPUCompute, model);
+        
         // Preprocess
         _preprocess = new ImagePreprocess(_size, _size);
 

@@ -1,5 +1,5 @@
 using UnityEngine;
-using Unity.Barracuda;
+using Unity.Sentis;
 
 namespace MediaPipe.HandLandmark {
 
@@ -10,7 +10,7 @@ namespace MediaPipe.HandLandmark {
                  menuName = "ScriptableObjects/MediaPipe/Hand Landmark Resource Set")]
 public sealed class ResourceSet : ScriptableObject
 {
-    public NNModel model;
+    public ModelAsset model;
     public ComputeShader preprocess;
     public ComputeShader postprocess;
 }

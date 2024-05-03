@@ -1,5 +1,5 @@
 using UnityEngine;
-using Unity.Barracuda;
+using Unity.Sentis;
 
 namespace Mediapipe.PoseLandmark
 {
@@ -62,8 +62,8 @@ namespace Mediapipe.PoseLandmark
         ComputeShader preProcessCS;
         ComputeShader postProcessCS;
         ComputeBuffer networkInputBuffer;
-        NNModel liteModel;
-        NNModel fullModel;
+        ModelAsset liteModel;
+        ModelAsset fullModel;
         Model model;
         IWorker woker;
         PoseLandmarkModel selectedModel;
@@ -101,7 +101,11 @@ namespace Mediapipe.PoseLandmark
             }
 
             //Execute neural network model.
-            var inputTensor = new Tensor(1, IMAGE_SIZE, IMAGE_SIZE, 3, input);
+            int bufferSize = IMAGE_SIZE * IMAGE_SIZE * 3;
+            var data = new float[bufferSize];
+            input.GetData(data);
+            var shape = new TensorShape(1, IMAGE_SIZE, IMAGE_SIZE,3);
+            var inputTensor = new TensorFloat(shape, data);
             woker.Execute(inputTensor);
             inputTensor.Dispose();
 
@@ -140,7 +144,7 @@ namespace Mediapipe.PoseLandmark
             woker?.Dispose();
 
             // Switch neural network models.
-            NNModel nnModel;
+            ModelAsset nnModel;
             switch(poseLandmarkModel){
                 case PoseLandmarkModel.lite:
                     nnModel = liteModel;
@@ -153,7 +157,7 @@ namespace Mediapipe.PoseLandmark
                     break;
             }
             model = ModelLoader.Load(nnModel);
-            woker = model.CreateWorker();
+            woker = WorkerFactory.CreateWorker(BackendType.GPUCompute, model);
 
             // Switch control flag.
             selectedModel = poseLandmarkModel;
@@ -162,8 +166,8 @@ namespace Mediapipe.PoseLandmark
         // Extract the vector in the 4 dimensions Tensor as a Compute Buffer.
         ComputeBuffer TensorToBuffer(string name, int length){
             var shape = new TensorShape(length);
-            var tensor = woker.PeekOutput(name).Reshape(shape);
-            var buffer = ((ComputeTensorData)tensor.data).buffer;
+            var tensor = woker.PeekOutput(name).ShallowReshape(shape);
+            var buffer = ((ComputeTensorData)tensor.tensorOnDevice).buffer;
             tensor.Dispose();
             return buffer;
         }
@@ -174,9 +178,9 @@ namespace Mediapipe.PoseLandmark
             var rtFormat = RenderTextureFormat.ARGB32;
             var shape = new TensorShape(1, h, w, 1);
             var rt = RenderTexture.GetTemporary(w, h, 0, rtFormat);
-            var tensor = woker.PeekOutput(name).Reshape(shape);
-            tensor.ToRenderTexture(rt);
-            tensor.Dispose();
+            var tensor = woker.PeekOutput(name).ShallowReshape(shape) as TensorFloat;
+            TextureConverter.RenderToTexture(tensor, rt);
+            // tensor.Dispose();
             return rt;
         }
         #endregion

@@ -1,5 +1,5 @@
 using UnityEngine;
-using Unity.Barracuda;
+using Unity.Sentis;
 
 namespace Mediapipe.PoseDetection{
     [CreateAssetMenu(fileName = "PoseDetection", menuName = "ScriptableObjects/Pose Detection Resource")]
@@ -9,6 +9,6 @@ namespace Mediapipe.PoseDetection{
         public ComputeShader postProcessCS;
         public ComputeShader postProcess2CS;
 
-        public NNModel model;
+        public ModelAsset model;
     }
 }
