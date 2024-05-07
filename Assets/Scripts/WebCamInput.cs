@@ -4,6 +4,7 @@ public class WebCamInput : MonoBehaviour
 {
     [SerializeField] string webCamName= "";
     [SerializeField] Vector2 webCamResolution = new Vector2(1920, 1080);
+    [SerializeField] int webcamFrameRate = 30;
     [SerializeField] Texture staticInput;
 
     // Provide input image Texture.
@@ -20,7 +21,7 @@ public class WebCamInput : MonoBehaviour
     void Start()
     {
         if(staticInput == null){
-            webCamTexture = new WebCamTexture(webCamName, (int)webCamResolution.x, (int)webCamResolution.y);
+            webCamTexture = new WebCamTexture(webCamName, (int)webCamResolution.x, (int)webCamResolution.y,webcamFrameRate);
             webCamTexture.Play();
         }
 
