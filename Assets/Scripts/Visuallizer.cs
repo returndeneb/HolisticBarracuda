@@ -27,7 +27,8 @@ public class Visuallizer : MonoBehaviour
     const int BODY_LINE_NUM = 35;
     // Pairs of vertex indices of the lines that make up body's topology.
     // Defined by the figure in https://google.github.io/mediapipe/solutions/pose.
-    readonly List<Vector4> linePair = new List<Vector4>{
+    readonly List<Vector4> linePair = new()
+    {
         new Vector4(0, 1), new Vector4(1, 2), new Vector4(2, 3), new Vector4(3, 7), new Vector4(0, 4), 
         new Vector4(4, 5), new Vector4(5, 6), new Vector4(6, 8), new Vector4(9, 10), new Vector4(11, 12), 
         new Vector4(11, 13), new Vector4(13, 15), new Vector4(15, 17), new Vector4(17, 19), new Vector4(19, 15), 
