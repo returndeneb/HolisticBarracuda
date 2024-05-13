@@ -19,6 +19,11 @@
     "com.unity.ide.rider": "3.0.28",
     "com.unity.ugui": "1.0.0",
     "com.unity.modules.audio": "1.0.0",
-    "com.unity.modules.video": "1.0.0"
+    "com.unity.modules.video": "1.0.0",
+    "com.unity.mathematics": "1.2.1",
+    "jp.keijiro.mediapipe.blazeface": "1.1.1",
+    "jp.keijiro.mediapipe.facelandmark": "1.0.0",
+    "jp.keijiro.mediapipe.iris": "1.1.0",
+    "jp.ikep.mediapipe.blazepose": "1.3.0"
   }
 }
